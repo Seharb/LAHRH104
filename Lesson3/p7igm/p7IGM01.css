@@ -1,0 +1,534 @@
+/* 
+  ------------------------------------------------
+  PVII CSS Image Gallery Magic 2
+  Copyright (c) 2011-2013 Project Seven Development
+  www.projectseven.com
+  Style Theme: 01
+  ------------------------------------------------
+*/
+
+/*Root IGM Container*/
+.p7IGM01 {
+	margin: 0 auto;
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.p7IGM01 a:focus {
+	outline: none;
+}
+.p7IGM01:after {
+	content: ".";
+	font-size: 0px;
+	display: inline;
+	overflow: hidden;
+	line-height: 1;
+}
+/*IGM Wrappers Line Height Reset for Stability*/
+.p7IGM01_layout, .p7IGM01_layout div {
+	line-height: 1;	
+}
+/*The Main Layout Container. Mozilla shadows reset to small spread to work around known bugs up to Firefox 13.*/
+.p7IGM01_layout {
+	box-shadow: 5px 5px 40px #000;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	padding: 10px;
+}
+/*The Background Color for the main IGM layout area. Must be set on both elements to fix border-radius artifact issue in IE9*/
+.p7IGM_wrapper, .p7IGM01_layout {
+	background-color: #222;
+	border-radius: 6px;
+}
+/*Thumbnail Scrolling List*/
+.p7IGM01_thumbswrapper {
+	position: relative;
+	border: 1px solid;
+	border-color: #111;
+	padding: 0px;
+	background-color: #111;
+	border-radius: 0px 0px 6px 6px;
+	box-shadow: 0px 0px 20px #000;
+	z-index: 1;
+	margin: 0px 10%;
+}
+.p7IGM01_thumbswrapper.IGM-thumbs-top {
+	margin: 0px 0px 12px 0px;
+	border-radius: 6px;
+}
+.p7IGM01_thumbsviewport {
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+}
+.p7IGM01_thumbsglidewrapper {
+	position: relative;
+	overflow: hidden;
+	z-index: 9;
+}
+.p7IGM01_thumbslist {
+	margin: 0px;
+	padding: 0px;
+}
+.p7IGM01_thumbslist li {
+	list-style-type: none;
+	margin: 6px 0px;
+	word-spacing: normal;
+	display: inline;
+}
+.p7IGM01_thumbslist img {
+	border: none;
+	vertical-align: middle;
+}
+.p7IGM01_thumbslist a {
+	padding: 3px;
+	border: 1px solid;
+	border-color: #444;
+	display: inline-block;
+}
+.p7IGM01_thumbslist a:hover {
+	border-color: #4FB9FF;
+}
+.p7IGM01_thumbslist a.thumb_down {
+	border-color: #40D7AA;
+	border-style: solid;
+}
+.p7IGM01_thumbslist li:first-child a {
+	margin-left: 6px;
+}
+.p7IGM01_thumbslist li:last-child a {
+	margin-right: 6px;
+}
+/*Thumbnail Presentation when set to No Scrolling*/
+.p7IGM01_thumbswrapper.IGM-no-scroll {
+	padding: 6px 0px;
+	margin: 0px;
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: 0px;
+	border: none;
+	text-align: center;
+}
+.IGM-no-scroll .IGM-thumbs  {
+	white-space: normal !important;
+}
+.p7IGM01_thumbswrapper.IGM-no-scroll.IGM-thumbs-top {
+	text-align: center;
+}
+.p7IGM01_thumbswrapper.IGM-no-scroll .p7IGM01_thumbslist a {
+	margin: 3px 0px !important;
+	border: 1px solid;
+	border-color: #444;
+}
+.p7IGM01_thumbswrapper.IGM-no-scroll .p7IGM01_thumbslist a:hover {
+	border-color: #000000;
+	background-color: #000;
+}
+.p7IGM01_thumbswrapper.IGM-no-scroll .p7IGM01_thumbslist a:hover {
+	border-color: #000000;
+}
+.p7IGM01_thumbswrapper.IGM-no-scroll .p7IGM01_thumbslist a.thumb_down, 
+.p7IGM01_thumbswrapper.IGM-no-scroll .p7IGM01_thumbslist a.thumb_down:hover {
+	border-color: #CC3300 !important;
+	background-color: transparent !important;
+}
+
+.p7IGM-no-thumbs, .IGMno-display {
+	display:none;
+}
+/*Thumbnail Scroller Left and Right Arrows*/
+.p7IGM01_arrows {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.IGM-arrows {
+	display: none;
+}
+.p7IGM01_arrows .arrow-left, .p7IGM01_arrows .arrow-right {
+	width: 50px;
+	text-align: center;
+	display: table;
+	z-index: 2;
+	background-color: #333;
+	box-shadow: inset 0px 0px 30px #000000;
+}
+.p7IGM01_arrows .arrow-left {
+	float: left;
+	position: relative;
+	border-right: 1px solid #000;
+	z-index: 60;
+	border-radius: 0px 0px 0px 5px;
+}
+.p7IGM01_arrows .arrow-right {
+	float: right;
+	position: relative;
+	border-left: 1px solid #000;
+	z-index: 60;
+	border-radius: 0px 0px 5px 0px;
+}
+.p7IGM01_arrows .arrow-left a, .p7IGM01_arrows .arrow-right a {
+	color: #666;
+	text-decoration: none;
+	font-size: 3em;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 3px;
+}
+.p7IGM01_arrows a:hover {
+	color: #999;
+}
+.p7IGM01 a.arrow-off {
+	color: #444;
+	cursor: default;
+}
+/*Full Size Image Strutures*/
+.p7IGM01_FSwrapper {
+	position: relative;
+	padding: 0px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.p7IGM01_image {
+	zoom: 1;
+	border-radius: 5px;
+}
+.p7IGM01_FSimage {}
+.p7IGM01_FSimage, .p7IGM01_FSimage img {
+	border-radius: 6px;
+}
+.p7IGM01_FSimage img {
+	display: block;
+	border: none;
+	max-width: 100%;
+}
+/*Caption and Description*/
+.IGM-cap-overlay-top {
+	position: absolute;
+	z-index: 9;
+	background-color: #111;
+	background: rgba(0,0,0,.75);
+	color: #CCC;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0px 0px 30px #000;
+	left: 50%;
+	margin-left: -150px;
+	width: 300px;
+	top: 0px;
+}
+.IGM-cap-overlay-bottom {
+	position: absolute;
+	z-index: 9;
+	background-color: #111;
+	background: rgba(0,0,0,.75);
+	color: #CCC;
+	text-align: center;
+	border-radius: 5px 5px 0px 0px;
+	box-shadow: 0px 0px 30px #000;
+	left: 50%;
+	margin-left: -150px;
+	width: 300px;
+	top: auto;
+	bottom: 0px;
+}
+.p7IGM01_caption {
+	font-size: 18px;
+	line-height: 1.35;
+	position: relative;
+	padding: 20px;
+	color: #CCC;
+	text-align: center;
+}
+.p7IGM01_desc {
+	font-size: 18px;
+	padding: 18px 0px;
+	color: #999;
+	line-height: 1.5;
+	position: relative;
+	text-align: center;
+}
+.p7IGMdescription-wrapper.IGM-desc-overlay-top {
+	position: absolute;
+	top: 0;
+	z-index: 8;
+	left: 50%;
+	margin-left: -200px;
+	border-radius: 5px 5px 0px 0px;
+	box-shadow: 0px 0px 30px #000;
+	width: 400px;
+}
+.p7IGMdescription-wrapper.IGM-desc-overlay-top .p7IGM01_desc {
+	background-color: #111;
+	background: rgba(0,0,0,.75);
+	padding: 10px 20px;
+	line-height: 1.5;
+}
+.p7IGMdescription-wrapper.IGM-desc-overlay-bottom {
+	position: absolute;
+	top: auto;
+	bottom: 0px;
+	z-index: 8;
+	left: 50%;
+	margin-left: -200px;
+	box-shadow: 0px 0px 30px #000;
+	width: 400px;
+	border-radius: 5px 5px 0px 0px;
+}
+.p7IGMdescription-wrapper.IGM-desc-overlay-bottom .p7IGM01_desc {
+	background-color: #111;
+	background: rgba(0,0,0,.75);
+	padding: 10px 20px;
+	line-height: 1.5;
+	border-radius: 5px 5px 0px 0px;
+}
+/* Toolbar Styles */
+.p7IGM01-toolbar-wrapper {
+	text-align: center;
+	position: relative;
+	z-index: 9;
+}
+.p7IGM01-toolbar-wrapper.IGM-toolbar-top {
+	padding: 0px 0px 10px 0px;
+}
+.p7IGM01-toolbar-wrapper.IGM-toolbar-bottom {
+	padding: 10px 0px 0px 0px;
+}
+.p7IGM01-toolbar {
+	margin: 0px;
+	overflow: hidden;
+	padding: 0px;
+	display: inline-block;
+	height: 20px;
+}
+.p7IGM01-toolbar li {
+	list-style-type: none;
+	float: left;
+	vertical-align: top;
+}
+.p7IGM01-toolbar a, .p7IGM01-toolbar a:visited {
+	padding: 0px;
+	text-decoration: none;
+	display: block;
+	height: 20px;
+	width: 20px;
+	font-size: 0px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.p7IGM01-toolbar a:hover {
+	background-position: 0px -20px;
+}
+.p7IGM01-toolbar i {
+	position: absolute;
+	left: -9000px;
+}
+.p7IGM01-first {
+	background-image: url(img/p7IGM-first-gray.png);
+}
+.p7IGM01-prev {
+	background-image: url(img/p7IGM-prev-gray.png);
+}
+.p7IGM01-pause-play.tb-play {
+	background-image: url(img/p7IGM-play-gray.png);
+}
+.p7IGM01-pause-play {
+	background-image: url(img/p7IGM-pause-gray.png);
+}
+.p7IGM01-next {
+	background-image: url(img/p7IGM-next-gray.png);
+}
+.p7IGM01-last {
+	background-image: url(img/p7IGM-last-gray.png);
+}
+.p7IGM01-fullscreen.max, .p7IGM01-fullscreen.min {
+	height: 20px;
+	width: 20px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: auto;
+	right: 0px;
+	z-index: 9;
+}
+.p7IGM01-fullscreen.max {
+	background-image: url(img/p7IGM-maximize-gray.png) !important;
+}
+.p7IGM01-fullscreen.min {
+	background-image: url(img/p7IGM-minimize-gray.png) !important;
+}
+.p7IGM01-fullscreen.max:hover, .p7IGM01-fullscreen.min:hover {
+	background-position: 0px -20px;
+}
+
+/*Prev-Next Arrows*/
+.p7IGM01-prev-arrow, .p7IGM01-next-arrow {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	position: absolute;
+	z-index: 100;
+	width: 1em;
+	padding: 4px;
+	text-align: center;
+	top: 50%;
+	font-size: 2.5em;
+	color: #FFF;
+	background-color: #111;
+	background: rgba(0,0,0,.7);
+	margin-top: -1.5em;
+	line-height: normal;
+	box-shadow: 6px 6px 20px rgba(0,0,0,.5);
+}
+.p7IGM01-prev-arrow {
+	left: 0px;
+	border-radius: 0px 4px 4px 0px;
+}
+.p7IGM01-next-arrow {
+	left: auto;
+	right: 0px;
+	border-radius: 4px 0px 0px 4px;
+}
+.p7IGM01-prev-arrow a, .p7IGM01-next-arrow a {
+	color: #999;
+	text-decoration: none;
+	display: block;
+}
+.p7IGM01-prev-arrow a:hover, .p7IGM01-next-arrow a:hover {
+	color: #CCC;
+}
+.p7IGM01-prev-arrow a.off, .p7IGM01-next-arrow a.off {
+	color: #000;
+	cursor:default;
+}
+.p7IGM01 .p7IGM-canvas {
+	background-color: #000;
+	border-radius: 5px;
+}
+/*DO NOT EDIT - Loading Image, Link and hidden description elements*/
+.p7IGM01_IGMloading {
+	position:absolute;
+	height:50px;
+	width:50px;
+	background-image: url(img/p7igm_loading.gif);
+	left:50%;
+	margin-left:-25px;
+	top: 50%;
+	margin-top:-4px;
+	z-index:99;
+	display: none;
+	border-radius: 8px;
+	box-shadow: 0px 0px 30px #000;
+	opacity: .6;
+	background-color: #FFF;
+}
+.p7igm_image_link, .p7igm_description {
+	display:none;
+}
+
+/*PAGINATOR*/
+.p7IGM01-paginator {
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+.p7IGM01-paginator.IGMpaginator-pags-top {
+	padding: 0px 0px 10px 0px;
+}
+.p7IGM01-paginator.IGMpaginator-pags-bottom {
+	padding: 10px 0px 0px 0px;
+}
+.p7IGM01-paginator ul {
+	margin: 0px;
+	overflow: hidden;
+	z-index: 20;
+	padding: 0px;
+	display: inline-block;
+	height: 20px;
+	font-size: 0px;
+	line-height: 0;
+}
+.p7IGM01-paginator li {
+	list-style-type: none;
+	float: left;
+}
+.p7IGM01-paginator a {
+	height: 20px;
+	width: 16px;
+	background-image: url(img/p7IGM-pags-gray.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+}
+.p7IGM01-paginator a:hover {
+	background-position: 0px -20px;
+}
+.p7IGM01-paginator .p7IGM01-pags-pause {
+	background-image: url(img/p7IGM-pagspause-gray.png);
+}
+.p7IGM01-paginator .p7IGM01-pags-pause.pag-play {
+	background-image: url(img/p7IGM-pagsplay-gray.png);
+}
+.p7IGM01-paginator .p7IGM01-pags-pause:hover {
+	background-position: 0px -20px;
+}
+.p7IGM01-pags-fullscreen.max, .p7IGM01-pags-fullscreen.min {
+	height: 20px;
+	width: 16px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: auto;
+	right: 0px;
+	z-index: 9;
+}
+.p7IGM01-pags-fullscreen.max {
+	background-image: url(img/p7IGM-pagsmax-gray.png);
+}
+.p7IGM01-pags-fullscreen.min {
+	background-image: url(img/p7IGM-pagsmin-gray.png);
+}
+.p7IGM01-paginator a.pags-down {
+	cursor: default;
+	background-image: url(img/p7IGM-pagsdown-gray.png);
+	background-repeat: no-repeat;
+}
+/*SPECIAL RULES*/
+.p7IGM-no-thumbs {
+	display:none;
+}
+.p7IGM01_image {
+	zoom:1;
+}
+
+/*Fullscreen-Mode Styles*/
+.p7IGM01.p7IGM-fullscreen {
+	background-image: none;
+	background-color: #000;
+}
+.p7IGM01.p7IGM-fullscreen .p7IGM01_layout,
+.p7IGM01.p7IGM-fullscreen .p7IGM01_FSwrapper {
+	border-radius: 0px;
+}
+
+/*Mobile Devices*/
+/*Phones*/
+@media only screen and (max-device-width: 480px) {
+	.p7IGM01_caption {font-size: 16px !important;}
+}
+/*Tablets*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.p7IGM01_caption {font-size: 16px !important;}
+}
+
+
+/*SPECIAL RULES TO WORK AROUND FLAWS IN DREAMWEAVER DESIGIN VIEW*/
+.IGMnoscript .p7IGM01_thumbslist li {display: inline;}
+.IGMnoscript .p7IGM03_thumbslist a {display: inline;}
+.IGMnoscript .p7IGM01_thumbswrapper {overflow: hidden; width: 99%; margin: 0px 0px;}
+.IGMnoscript .p7IGM01_thumbslist {white-space: nowrap;}
+.IGMnoscript .p7IGM01_FSwrapper {width: 98%;}
+.IGMnoscript .p7IGM01_fs_img {width: 100%;}
+.IGMnoscript .p7IGMdescription-wrapper {display: none;}
+.IGMnoscript .p7IGM01-prev-arrow, .IGMnoscript .p7IGM01-next-arrow {display: none;}
+.IGMnoscript .p7IGM01-paginator {display: none;}
+.IGMnoscript .p7IGMcaption-wrapper {display: none;}
+.IGMnoscript .p7IGM01-toolbar-wrapper {display: none;}
+.IGMnoscript .p7IGM01-fullscreen.max {top: 0px;}
